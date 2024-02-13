@@ -1,0 +1,6 @@
+@RS.Service.BackgroundListner_HostAddress = http://localhost:5098
+
+GET {{RS.Service.BackgroundListner_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  rs.service.kafkawebapi:
+    image: ${DOCKER_REGISTRY-}rsservicekafkawebapi
+    build:
+      context: .
+      dockerfile: RS.Service.KafkaWebApi/Dockerfile
+
+  rs.service.backgroundlistner:
+    image: ${DOCKER_REGISTRY-}rsservicebackgroundlistner
+    build:
+      context: .
+      dockerfile: RS.Service.BackgroundListner/Dockerfile
+

@@ -20,11 +20,4 @@ public class KafkaController : ControllerBase
         await _producerService.SendMessageAsync(message);
         return Ok();
     }
-    [HttpGet("Consume")]
-    public ActionResult<string> Consume(CancellationToken cancellationToken)
-    {
-        var data = new KafkaConsumerService();
-
-        return Ok(data.ConsumeMessages2("test-topic", cancellationToken));
-    }
 }
